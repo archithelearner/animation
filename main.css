@@ -1,0 +1,90 @@
+body{
+height: 100%;
+width: 100%;
+overflow: hidden;
+margin: 0;
+}
+.sky, .field, .runway,{
+position: relative;
+}
+.sky{
+height: 30%;
+background: skyblue;
+}
+
+
+
+
+.field{
+height:100px;
+background: green;
+
+}
+.runway{
+height: 160px;
+background: dimgrey;
+box-sizing: border-box;
+border-top: 10px solid grey;
+border-bottom: 10px solid grey;
+width: 100%; 
+}
+.lines{
+box-sizing: border-box;
+border: 5px dashed #fff;
+height: 0px;
+width: 100%;
+position:absolute;
+top: 50%;
+}
+.lines1{
+    box-sizing: border-box;
+border: 5px dashed #fff;
+height: 0px;
+width: 100%;
+position: absolute;
+top: 90%;
+}
+.benji{
+    position: absolute;
+    left: 0px;
+    top: 30%;
+    animation-name: ride1;
+    animation-duration: 10s;
+animation-fill-mode: forwards;
+
+animation-iteration-count: infinite;
+}
+.jane{
+
+        position: absolute;
+        top:75%;
+        left:500px;
+        
+        animation: ride 3s ease-out infinite normal,jump 3s 1.2s ease;
+        
+        
+        
+
+}
+@keyframes ride1{
+0%{transform: translate(0px,0px)}
+30%{transform: translate(300px,-100px)}
+70%{transform: translate(1000px,-800px)}
+80%{transform: translate(1500px,-1000)}
+100%{transform: translate(2000px,-1400)}
+}
+
+@keyframes ride{
+    0%{transform: translate(1000px,-900px)}
+    25%{transform: translate(700px,-600px)}
+    50%{transform: translate(100px,-100px)} 
+    /*65%{transform: translate(100px,-100px)}*/
+    
+}
+
+
+/*@keyframes jump{
+    0%{top:-100px;}
+    50%{top:-300px;}
+    100%{top:-100px;}
+}*/
